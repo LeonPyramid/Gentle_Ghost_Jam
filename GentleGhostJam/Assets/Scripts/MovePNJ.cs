@@ -8,7 +8,7 @@ public class MovePNJ : MonoBehaviour
 {
     public moveType mouvement;
     public orient curOrient = orient.n;
-
+    public bool retour;
     public float speed;
     private int i;
     private float temps;
@@ -26,6 +26,7 @@ public class MovePNJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        retour = false;
         i = 0;
         tilePos = new Vector2(this.transform.position.x,this.transform.position.y); // place la tuile de base
         isMoving = false;
@@ -36,6 +37,10 @@ public class MovePNJ : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (mouvement == moveType.loop && GetComponent<ListeNoeuds>().liste[0].transform.position != GetComponent<ListeNoeuds>().liste[GetComponent<ListeNoeuds>().liste.GetLength(0)-1].transform.position){
+            mouvement = moveType.one;
+        }
+
         temps -= Time.deltaTime; // fait attendre le PNJ
         if (temps <=0){
             if(!isMoving){
@@ -57,17 +62,36 @@ public class MovePNJ : MonoBehaviour
                     isMoving = false;
                     direct = new Vector2(0,0);
                     Move (speed,direct);
-                    if (i != GetComponent<ListeNoeuds>().liste.GetLength(0)-1){
-                        temps = GetComponent<ListeNoeuds>().liste[i].temps;     //récupère le temps d'attente
+                    if(retour == false) {
+                        if (i != GetComponent<ListeNoeuds>().liste.GetLength(0)-1){
+                            temps = GetComponent<ListeNoeuds>().liste[i].temps;     //récupère le temps d'attente
+                                i++;
+                        }
+                        else if (mouvement == moveType.one){
+                            Destroy(GetComponent<MovePNJ>());
+                        }
+                        else if (mouvement == moveType.loop){
+                            i = 0;
                             i++;
+                        }
+                        else if (mouvement == moveType.reverse){
+                            retour = true;
+                            i--;
+                        }
                     }
-                    else if (mouvement == moveType.one){
-                        Destroy(GetComponent<MovePNJ>());
+                    else if(mouvement == moveType.reverse && retour == true){
+                        if (i != 0){
+                            temps = GetComponent<ListeNoeuds>().liste[i].temps;     //récupère le temps d'attente
+                            i--;
+                        }
+                        else {
+                            retour = false;
+                            i++;
+                        }
                     }
                 }
             }
         }
-        
     }
 
     float CalculateDistFrom (Vector2 coord){
