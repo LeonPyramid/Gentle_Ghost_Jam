@@ -44,6 +44,12 @@ TagManager:
   - name: Wall
     uniqueID: 2516714395
     locked: 0
+  - name: PNJ
+    uniqueID: 349547983
+    locked: 0
+  - name: Player
+    uniqueID: 2175377523
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
