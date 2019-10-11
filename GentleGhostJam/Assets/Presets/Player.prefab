@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4658504790700877364}
   - component: {fileID: 4658504790700877365}
   - component: {fileID: 2108710902957137571}
+  - component: {fileID: 5356699232291599324}
   - component: {fileID: 4798231833959382640}
   - component: {fileID: 5231302900918362625}
   - component: {fileID: 6028597474094051998}
@@ -97,12 +98,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b8de7ea5a1869488609ebb13e5ebf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curOrient: 0
+  curOrient: 1
   speed: 2
   tilePos: {x: 0, y: 0}
   direct: {x: 0, y: 0}
   horTemp: 0
   verTemp: 0
+--- !u!114 &5356699232291599324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658504790700877370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c778c3d05171c65428e3a7079bdce101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &4798231833959382640
 Rigidbody2D:
   serializedVersion: 4
