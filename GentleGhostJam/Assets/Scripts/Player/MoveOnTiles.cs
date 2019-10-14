@@ -8,10 +8,14 @@ public class MoveOnTiles : MonoBehaviour
 {
     public orient curOrient = orient.n;
     public float speed;
+    public bool left;
     private bool isMoving; //Savoir si le perso est en mouvement
     public bool GetIsMoving()
     {
         return isMoving;
+    }
+    public bool GetLeft(){
+        return left;
     }
 
     public Vector2 tilePos;
@@ -29,6 +33,7 @@ public class MoveOnTiles : MonoBehaviour
         isMoving = false;
         direct = new Vector2(0,0);
         rgbd = this.GetComponent<Rigidbody2D>();
+        left = false;
     }
 
     // Update is called once per frame
@@ -92,6 +97,7 @@ public class MoveOnTiles : MonoBehaviour
                 Move (speed,direct);
             }
             else {
+                left = !left;
                 tilePos = transform.position;
                 if (horizontal*horTemp<=0&&vertical*verTemp<=0){
                     isMoving = false;
