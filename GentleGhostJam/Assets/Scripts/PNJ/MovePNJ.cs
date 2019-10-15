@@ -73,10 +73,13 @@ public class MovePNJ : MonoBehaviour
                         else if (mouvement == moveType.loop){
                             i = 0;
                             i++;
+                            temps = GetComponent<ListeNoeuds>().liste[i].temps;
+
                         }
                         else if (mouvement == moveType.reverse){
                             retour = true;
                             i--;
+                            temps = GetComponent<ListeNoeuds>().liste[i].temps;
                         }
                     }
                     else if(mouvement == moveType.reverse && retour == true){
