@@ -8,6 +8,7 @@ public class AnimatorSync : MonoBehaviour
     private orient orientation;
     private bool isMoving;
     private bool left;
+    private bool midMove;
 
     void Start()
     {
@@ -19,12 +20,15 @@ public class AnimatorSync : MonoBehaviour
     {
         orientation = GetComponent<MoveOnTiles>().curOrient;
         isMoving = GetComponent<MoveOnTiles>().GetIsMoving();
-        left = GetComponent<MoveOnTiles>().GetLeft();
+        left = GetComponent<MoveOnTiles>().GetLeftFoot();
+        midMove = GetComponent<MoveOnTiles>().GetMidMove();
+
         animator.SetBool("North",orientation==orient.n);
         animator.SetBool("South",orientation==orient.s);
         animator.SetBool("West",orientation==orient.w);
         animator.SetBool("East",orientation==orient.e);
         animator.SetBool("IsMoving",isMoving);
         animator.SetBool("Left",left);
+        animator.SetBool("MidMove",midMove);
     }
 }
