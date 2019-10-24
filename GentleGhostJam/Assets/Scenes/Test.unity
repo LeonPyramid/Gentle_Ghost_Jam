@@ -3293,11 +3293,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255523385414645215, guid: 19826767a3d1f14499f50e99a65eec25,
         type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8255523385414645215, guid: 19826767a3d1f14499f50e99a65eec25,
-        type: 3}
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}

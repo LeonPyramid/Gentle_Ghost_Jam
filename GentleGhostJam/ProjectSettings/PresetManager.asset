@@ -19,16 +19,16 @@ PresetManager:
     - m_Preset: {fileID: 2655988077585873504, guid: 0be5aa41a7b22774d9db50f3249e8848,
         type: 2}
   - type:
-      m_NativeTypeID: 1006
-      m_ManagedTypePPtr: {fileID: 0}
-      m_ManagedTypeFallback: 
-    defaultPresets:
-    - m_Preset: {fileID: 2655988077585873504, guid: ecdcfffeb07011a4fa0c002d276e8a15,
-        type: 2}
-  - type:
       m_NativeTypeID: 50
       m_ManagedTypePPtr: {fileID: 0}
       m_ManagedTypeFallback: 
     defaultPresets:
     - m_Preset: {fileID: 2655988077585873504, guid: 3eeeac2ed7b246541b91529b8a6f21ac,
+        type: 2}
+  - type:
+      m_NativeTypeID: 1006
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    defaultPresets:
+    - m_Preset: {fileID: 2655988077585873504, guid: ecdcfffeb07011a4fa0c002d276e8a15,
         type: 2}
