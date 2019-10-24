@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class Inventaire : MonoBehaviour
 {
+    public bool clicked;
+    public int clicId;
     private ListeObjet listeToutObjet;
     public ListeObjet listeObjets;
     public GameObject[] lCases;
     void Start()
     {
+        clicId = -1;
+        clicked = false;
         listeToutObjet = GameObject.FindGameObjectWithTag("listeToutObjet").GetComponent<ListeObjet>();
         for (int i =0; i<listeObjets.size;i++)
         {
