@@ -2897,6 +2897,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: collectDialog.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: collectedDialog.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: collectDialog.Array.data[0].text
+      value: I get mark
+      objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: collectedDialog.Array.data[0].text
+      value: Nothing to see here
+      objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: postCollectDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809142143382144530, guid: f2fe2078888b8fa478f05210cfee84ac,
+        type: 3}
+      propertyPath: collesctedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 97f13605fdfc72149873571464c164a4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2fe2078888b8fa478f05210cfee84ac, type: 3}
 --- !u!1001 &2639705177323114214
@@ -3391,6 +3422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689060588403487809, guid: 19826767a3d1f14499f50e99a65eec25,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19826767a3d1f14499f50e99a65eec25, type: 3}

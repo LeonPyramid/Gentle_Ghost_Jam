@@ -46,6 +46,8 @@
   </PropertyGroup>
   <ItemGroup>     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Interaction\CollectableObject.cs" />
+     <Compile Include="Assets\Scripts\Interaction\Dialog.cs" />
+     <Compile Include="Assets\Scripts\Interaction\DialogManager.cs" />
      <Compile Include="Assets\Scripts\Interaction\Interaction.cs" />
      <Compile Include="Assets\Scripts\Inventaire\Case.cs" />
      <Compile Include="Assets\Scripts\Inventaire\Inventaire.cs" />

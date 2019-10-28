@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 297835949685890295}
   - component: {fileID: 297835949685890294}
   - component: {fileID: 8299846540400447555}
+  - component: {fileID: 8625051124724950507}
   - component: {fileID: 8024165135967533588}
   m_Layer: 0
   m_Name: hallo
@@ -158,6 +159,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32, y: 32}
   m_EdgeRadius: 0
+--- !u!114 &8625051124724950507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297835949685890292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff0cd83ede80ae499bbe068ee0f39a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dialogWithPlayer: []
 --- !u!114 &8024165135967533588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,3 +186,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   interactable: 0
+  interClass: 0

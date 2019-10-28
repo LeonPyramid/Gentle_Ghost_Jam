@@ -6,6 +6,7 @@ TagManager:
   tags:
   - listeToutObjet
   - Inventory
+  - DialogBar
   layers:
   - Default
   - TransparentFX

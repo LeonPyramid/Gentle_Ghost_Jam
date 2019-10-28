@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Inventaire : MonoBehaviour
 {
+    public DialogManager dialogManager; //Pour récupérer dans les objets
     public bool clicked;
     public int caseId;
     public int clicId;

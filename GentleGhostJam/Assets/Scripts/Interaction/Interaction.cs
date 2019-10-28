@@ -13,10 +13,15 @@ public class Interaction : MonoBehaviour
     
     public interactionClass interClass;
 
+    public Dialog dialog;
+
+    public DialogManager dialogManager;
+
     private void Start() {
         this.GetComponent<SpriteMask>().sprite = parent.GetComponent<SpriteRenderer>().sprite;
         tmp = this.GetComponent<SpriteRenderer>().sprite;
         this.GetComponent<SpriteRenderer>().sprite = null;
+        dialogManager = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventaire>().dialogManager;
     }
 
     public void OnMouseEnter(){
@@ -33,11 +38,20 @@ public class Interaction : MonoBehaviour
             switch (interClass){
                 case interactionClass.CollectableObject:
                     bool colliderOff;
-                    interactable = false;
-                    colliderOff = parent.GetComponent<CollectableObject>().Collect();
-                    this.GetComponent<SpriteRenderer>().sprite = null;
-                    if (colliderOff){
-                        this.GetComponent<Collider2D>().isTrigger = true;
+                    CollectableObject parCollect = parent.GetComponent<CollectableObject>();
+                    if(!parCollect.collected){
+                        colliderOff = parCollect.Collect();
+                        this.GetComponent<SpriteRenderer>().sprite = null;
+                        if (!parCollect.postCollectDialog){
+                            interactable = false;
+                        }
+                        if (colliderOff){
+                            this.GetComponent<Collider2D>().isTrigger = true;
+                        }
+                        dialogManager.SetDialog(parCollect.collectDialog);
+                    }
+                    else{
+                        dialogManager.SetDialog(parCollect.collectedDialog);
                     }
 
                 break;
