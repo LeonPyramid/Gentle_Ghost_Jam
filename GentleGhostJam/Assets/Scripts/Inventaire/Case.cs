@@ -25,7 +25,22 @@ public class Case : MonoBehaviour, IPointerDownHandler
         if (!clicked && inventaire.listeObjets.lObj[indice].id!=-1){
             mask.GetComponent<Image>().color = color;
             clicked = true;
+            if(inventaire.caseId != -1){
+                inventaire.lCases[inventaire.caseId].GetComponent<Case>().UnClic();
+            }
+            inventaire.clicId = inventaire.listeObjets.lObj[indice].id;
+            inventaire.caseId = indice;
+        }
+        else if (clicked){
+            UnClic();
+            inventaire.caseId = -1;
         }
         
+    }
+
+    public void UnClic (){
+        mask.GetComponent<Image>().color = transparent;
+        clicked = false;
+        inventaire.clicId = -1;
     }
 }

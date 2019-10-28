@@ -36,9 +36,8 @@ public class ListeObjet : MonoBehaviour{
         }
     }
     public void addUnObjet(ObjetInv unObjet){
-        ObjetInv empty = new ObjetInv();
         int i = 0;
-        while (i < this.size && this.lObj[i] != empty){
+        while (i < this.size && this.lObj[i].id != -1){
             i++;
         }
         this.lObj[i] = unObjet;

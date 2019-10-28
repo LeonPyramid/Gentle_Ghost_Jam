@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Inventaire : MonoBehaviour
 {
     public bool clicked;
+    public int caseId;
     public int clicId;
     private ListeObjet listeToutObjet;
     public ListeObjet listeObjets;
     public GameObject[] lCases;
     void Start()
     {
+        caseId = -1;
         clicId = -1;
         clicked = false;
         listeToutObjet = GameObject.FindGameObjectWithTag("listeToutObjet").GetComponent<ListeObjet>();
@@ -24,7 +26,7 @@ public class Inventaire : MonoBehaviour
         updateInventory();
     }
 
-    void updateInventory(){
+    public void updateInventory(){
         for (int i = 0; i<listeObjets.size;i++){
             lCases[i].GetComponent<Image>().sprite = listeObjets.lObj[i].sprite;
             if(listeObjets.lObj[i].id == -1){
@@ -41,11 +43,11 @@ public class Inventaire : MonoBehaviour
         }
     }
 
-    void addInInventory(int objId){
+    public void addInInventory(int objId){
         listeObjets.addUnObjet(listeToutObjet.getUnObjetById(objId));
         updateInventory();
     }
-    void supInInventory(int objId){
+    public void supInInventory(int objId){
         listeObjets.supUnObjetById(objId);
         updateInventory();
     }
