@@ -197,6 +197,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: b4a631e31143cde40a0b89b44325e11f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b722980a9b138cf448bc46e471500de0, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 44db1c3f3e8f860408304d1264001155, type: 3}
@@ -220,6 +222,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: d2f30eab309208a488d12312657a3bcd, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 32c3a7aebe2855448888346063c3f97f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 12
     m_Data:
@@ -358,7 +362,7 @@ GameObject:
   - component: {fileID: 6680385470032853967}
   - component: {fileID: 1461728438879539046}
   m_Layer: 31
-  m_Name: Ground
+  m_Name: WallSkull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -51,6 +51,7 @@ public class Inventaire : MonoBehaviour
     public void supInInventory(int objId){
         listeObjets.supUnObjetById(objId);
         updateInventory();
+        lCases[caseId].GetComponent<Case>().UnClic();
     }
 
 }

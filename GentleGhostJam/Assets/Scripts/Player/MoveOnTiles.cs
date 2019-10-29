@@ -43,6 +43,9 @@ public class MoveOnTiles : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
         horizontal = Input.GetAxis("Horizontal");
         vertical   = Input.GetAxis("Vertical");
         if(!isMoving){

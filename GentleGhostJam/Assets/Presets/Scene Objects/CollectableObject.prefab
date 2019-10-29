@@ -95,22 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145a02a0e5fffc2438b3c95f52f953c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collected: 0
   objId: 0
   collesctedSprite: {fileID: 0}
-  dialog: {fileID: 0}
---- !u!114 &1683738355306199673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809142145223993923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eff0cd83ede80ae499bbe068ee0f39a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_dialogWithPlayer: []
+  collectDialog: []
+  collectedDialog: []
+  postCollectDialog: 0
 --- !u!1001 &1087766960860690103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,12 +222,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e16e95d6b77d82e43a4f9190ccca29db, type: 3}
---- !u!1 &809142145223993923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 297835949685890292, guid: e16e95d6b77d82e43a4f9190ccca29db,
-    type: 3}
-  m_PrefabInstance: {fileID: 1087766960860690103}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &809142145223993922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 297835949685890293, guid: e16e95d6b77d82e43a4f9190ccca29db,

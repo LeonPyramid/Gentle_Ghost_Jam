@@ -347,8 +347,9 @@ MonoBehaviour:
   lObj:
   - {fileID: 6425377996495088802, guid: bb3afcdb9cbcba549b41c13471baca52, type: 3}
   - {fileID: 6425377996495088802, guid: f3a151faf0f13ca408d1fdb3739388fb, type: 3}
+  - {fileID: 6425377996495088802, guid: b359c0450bd87fd44abf01877c48de2a, type: 3}
   libel: all
-  size: 2
+  size: 3
 --- !u!1 &3632874734190177623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,7 +2060,7 @@ PrefabInstance:
     - target: {fileID: 4908486182389442752, guid: e6d8a8461cc0bea4cb40da5b32681a92,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 150
+      value: 233.9
       objectReference: {fileID: 0}
     - target: {fileID: 4908486182389442752, guid: e6d8a8461cc0bea4cb40da5b32681a92,
         type: 3}

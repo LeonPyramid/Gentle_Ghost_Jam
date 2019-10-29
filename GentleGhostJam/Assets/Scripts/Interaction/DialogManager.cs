@@ -54,9 +54,11 @@ public class DialogManager : MonoBehaviour {
         // Displays the current page
 		if (m_dialogToDisplay.Count > 0)
         {
+            Time.timeScale = 0f;
             m_renderText.text = m_dialogToDisplay[0].text;
         } else
         {
+            Time.timeScale = 1f;
             this.gameObject.SetActive(false);
         }
 
@@ -70,5 +72,9 @@ public class DialogManager : MonoBehaviour {
     public bool IsOnScreen()
     {
         return this.gameObject.activeSelf;
+    }
+
+    public void Next(){
+        m_dialogToDisplay.RemoveAt(0);
     }
 }

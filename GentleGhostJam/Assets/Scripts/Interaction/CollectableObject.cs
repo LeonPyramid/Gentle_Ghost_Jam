@@ -24,7 +24,7 @@ public class CollectableObject : MonoBehaviour
     public bool Collect() { //renvoie si il faut desactiver le collider ou  non
         if (!collected){
             inventaire.addInInventory(objId);
-            this.GetComponent<SpriteRenderer>().sprite = collesctedSprite;  
+            this.GetComponent<SpriteRenderer>().sprite = collesctedSprite;
             collected = true;
             if(collesctedSprite == null){
                 return true;
