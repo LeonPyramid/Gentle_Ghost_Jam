@@ -50,6 +50,9 @@ TagManager:
   - name: PNJ
     uniqueID: 349547983
     locked: 0
+  - name: Halo
+    uniqueID: 3599670799
+    locked: 0
   - name: Player
     uniqueID: 2175377523
     locked: 0

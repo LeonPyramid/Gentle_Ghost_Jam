@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum orient {n,s,e,w};
 public class MoveOnTiles : MonoBehaviour
 {
+    public int moveSize;
     public orient curOrient = orient.n;
     public float speed;
     private bool leftFoot;
@@ -81,28 +81,28 @@ public class MoveOnTiles : MonoBehaviour
                 direct = -direct;
                 horTemp = horizontal;
                 if (horizontal>0){
-                    tilePos = new Vector2(tilePos.x-32,tilePos.y);
+                    tilePos = new Vector2(tilePos.x-moveSize,tilePos.y);
                 }
                 else
                 {
-                    tilePos = new Vector2(tilePos.x+32,tilePos.y);
+                    tilePos = new Vector2(tilePos.x+moveSize,tilePos.y);
                 }
             }
             if (verTemp*vertical<0){
                 direct = -direct;
                 verTemp = vertical;
                 if (vertical>0){
-                    tilePos = new Vector2(tilePos.x,tilePos.y-32);
+                    tilePos = new Vector2(tilePos.x,tilePos.y-moveSize);
                 }
                 else
                 {
-                    tilePos = new Vector2(tilePos.x,tilePos.y+32);
+                    tilePos = new Vector2(tilePos.x,tilePos.y+moveSize);
                 }
             }   Code de demi-tour qui fait planter les collisions, à utiliser si tu prévient les colisions avec les murs*/
             distFromTile = CalculateDistFrom(tilePos);
-            if (distFromTile < 32){
+            if (distFromTile < moveSize){
                 Move (speed,direct);
-                if (distFromTile > 16){
+                if (distFromTile > moveSize/2){
                     midMove = true;
                 }
             }
