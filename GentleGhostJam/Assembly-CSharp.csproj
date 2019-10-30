@@ -44,9 +44,9 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-     <Compile Include="Assets\Scripts\Interaction\CollectableObject.cs" />
+  <ItemGroup>     <Compile Include="Assets\Scripts\Interaction\CollectableObject.cs" />
      <Compile Include="Assets\Scripts\Interaction\Dialog.cs" />
+     <Compile Include="Assets\Scripts\Interaction\DialogButton.cs" />
      <Compile Include="Assets\Scripts\Interaction\DialogManager.cs" />
      <Compile Include="Assets\Scripts\Interaction\DialogObject.cs" />
      <Compile Include="Assets\Scripts\Interaction\Interaction.cs" />
@@ -57,10 +57,12 @@
      <Compile Include="Assets\Scripts\Inventaire\ObjetInv.cs" />
      <Compile Include="Assets\Scripts\Inventaire\ToutOjets.cs" />
      <Compile Include="Assets\Scripts\Player\AnimatorSync.cs" />
+     <Compile Include="Assets\Scripts\Player\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\MoveOnTiles.cs" />
      <Compile Include="Assets\Scripts\PNJ\ListeNoeuds.cs" />
      <Compile Include="Assets\Scripts\PNJ\MovePNJ.cs" />
      <Compile Include="Assets\Scripts\PNJ\Noeud.cs" />
+     <Compile Include="Assets\SpawnDialog.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Game Design/GitHub/Gentle_Ghost_Jam/GentleGhostJam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
