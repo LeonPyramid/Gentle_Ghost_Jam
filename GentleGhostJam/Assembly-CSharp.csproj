@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Interaction\DialogButton.cs" />
      <Compile Include="Assets\Scripts\Interaction\DialogManager.cs" />
      <Compile Include="Assets\Scripts\Interaction\DialogObject.cs" />
+     <Compile Include="Assets\Scripts\Interaction\DoorObject.cs" />
      <Compile Include="Assets\Scripts\Interaction\Interaction.cs" />
      <Compile Include="Assets\Scripts\Interaction\InteractiveObject.cs" />
      <Compile Include="Assets\Scripts\Inventaire\Case.cs" />

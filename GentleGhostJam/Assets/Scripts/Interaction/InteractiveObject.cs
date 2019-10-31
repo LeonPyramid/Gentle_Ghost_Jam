@@ -16,7 +16,6 @@ public class InteractiveObject : MonoBehaviour
     public Sprite postActivation;
     void Start()
     {
-        activated = false;
         inventaire = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventaire>();
     }
 
@@ -30,6 +29,9 @@ public class InteractiveObject : MonoBehaviour
         else if(!activated){
             if(objectId == keyObjectId){
                 this.GetComponent<SpriteRenderer>().sprite = postActivation;
+                if(this.tag == "Door"){
+                    this.GetComponent<DoorObject>().OpenDoor();
+                }
                 activated = true;
                 if( destroyObject){
                     inventaire.supInInventory(keyObjectId);
