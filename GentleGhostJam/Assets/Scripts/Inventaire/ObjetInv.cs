@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjetInv : MonoBehaviour {
     public int id;
     public Sprite sprite;
+    public List<DialogPage> dialogInfo;
 
     public ObjetInv(int unId, Sprite unSprite){
         this.id = unId;
@@ -19,5 +20,9 @@ public class ObjetInv : MonoBehaviour {
     }
     public Sprite getSprite(){
         return this.sprite;
+    }
+    
+    public List<DialogPage> getDialog(){
+        return this.dialogInfo;
     }
 }

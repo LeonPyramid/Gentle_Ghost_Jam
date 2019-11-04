@@ -28,9 +28,11 @@ public class ListeObjet : MonoBehaviour{
     }
     public void supUnObjetById (int unId) {
         int i = 0;
-        while (i < this.size){
+        bool found = false;
+        while (i < this.size && found == false){
             if(this.lObj[i].getId()==unId){
-                this.lObj[i]=new ObjetInv();
+                found = true;
+                this.lObj[i] = new ObjetInv();
             }
             i++;
         }

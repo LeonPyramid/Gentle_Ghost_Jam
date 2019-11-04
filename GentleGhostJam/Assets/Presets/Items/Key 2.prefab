@@ -45,3 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   sprite: {fileID: 21300000, guid: 3f2ca5e4e252c7e4dad3f359ebd8643d, type: 3}
+  dialogInfo:
+  - text: I wonder how did they get in my fridge...
+    color: {r: 0, g: 0, b: 0, a: 0}

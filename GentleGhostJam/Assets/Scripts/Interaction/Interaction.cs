@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public enum interactionClass {CollectableObject,DialogObject,ReactiveObject};
 public class Interaction : MonoBehaviour
 {
+    private AudioSource bip;
     public List<DialogPage> cantDoDialog;
     private Inventaire inventaire;
     private Sprite tmp;
@@ -20,6 +21,7 @@ public class Interaction : MonoBehaviour
     public DialogManager dialogManager;
 
     private void Start() {
+        bip = GameObject.FindGameObjectWithTag("BipSound").GetComponent<AudioSource>();
         this.GetComponent<SpriteMask>().sprite = parent.GetComponent<SpriteRenderer>().sprite;
         tmp = this.GetComponent<SpriteRenderer>().sprite;
         this.GetComponent<SpriteRenderer>().sprite = null;
@@ -38,6 +40,7 @@ public class Interaction : MonoBehaviour
 
     private void OnMouseDown() {
         if (interactable){
+            bip.Play();
             switch (interClass){
                 case interactionClass.CollectableObject:
                     if(inventaire.clicId!=-1){

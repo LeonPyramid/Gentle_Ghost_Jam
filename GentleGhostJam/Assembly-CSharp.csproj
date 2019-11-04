@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Inventaire\Case.cs" />
      <Compile Include="Assets\Scripts\Inventaire\Inventaire.cs" />
      <Compile Include="Assets\Scripts\Inventaire\ListeObjet.cs" />
+     <Compile Include="Assets\Scripts\Inventaire\LoupeCase.cs" />
      <Compile Include="Assets\Scripts\Inventaire\ObjetInv.cs" />
      <Compile Include="Assets\Scripts\Inventaire\ToutOjets.cs" />
      <Compile Include="Assets\Scripts\Player\AnimatorSync.cs" />

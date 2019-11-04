@@ -28,9 +28,12 @@ public class InteractiveObject : MonoBehaviour
         }
         else if(!activated){
             if(objectId == keyObjectId){
-                this.GetComponent<SpriteRenderer>().sprite = postActivation;
+                //this.GetComponent<SpriteRenderer>().sprite = postActivation;
                 if(this.tag == "Door"){
                     this.GetComponent<DoorObject>().OpenDoor();
+                }
+                else{
+                    this.GetComponent<SpriteRenderer>().sprite = postActivation;
                 }
                 activated = true;
                 if( destroyObject){

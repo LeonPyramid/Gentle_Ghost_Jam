@@ -12,9 +12,11 @@ public class Case : MonoBehaviour, IPointerDownHandler
     private Color transparent;
     public int indice;
     public bool clicked;
+    public GameObject loupe;
 
 
     private void Start() {
+        loupe.SetActive(false);
         transparent.a = 0;
         inventaire = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventaire>();
         mask.GetComponent<Image>().color = transparent;
@@ -23,6 +25,7 @@ public class Case : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData) {
         if (!clicked && inventaire.listeObjets.lObj[indice].id!=-1){
+            loupe.SetActive(true);
             mask.GetComponent<Image>().color = color;
             clicked = true;
             if(inventaire.caseId != -1){
@@ -42,5 +45,6 @@ public class Case : MonoBehaviour, IPointerDownHandler
         mask.GetComponent<Image>().color = transparent;
         clicked = false;
         inventaire.clicId = -1;
+        loupe.SetActive(false);
     }
 }

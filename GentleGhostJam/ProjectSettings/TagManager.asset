@@ -8,6 +8,8 @@ TagManager:
   - Inventory
   - DialogBar
   - Door
+  - DoorSound
+  - BipSound
   layers:
   - Default
   - TransparentFX
